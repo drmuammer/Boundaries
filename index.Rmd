@@ -1,15 +1,13 @@
 ---
-title: "Boundaries"
-author: "Muammer Beslen"
-date: "`r Sys.Date()`"
-output: html_document
+title: "Neigbourhood Boundaries"
 ---
+
 
 ```{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Neighbourhood Boundaries
+
 
 Navigate the map to use neighbourhood and village boundaries. As you move the map closer, the neighbourhood and village boundaries will start to appear.
 
