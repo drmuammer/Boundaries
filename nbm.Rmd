@@ -1,0 +1,43 @@
+---
+title: "Boundaries"
+author: "Muammer Beslen"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Neighbourhood Boundaries
+
+Navigate the map to use neighbourhood and village boundaries. As you move the map closer, the neighbourhood and village boundaries will start to appear.
+
+```{r include=TRUE, echo=FALSE}
+# pacman paketini yükleyin
+pacman::p_load(rmarkdown, leaflet, sp, raster, htmlwidgets, here, raster, sf, tmap, terra)
+```
+
+# Enjoy Yourself!
+
+```{r out.width='100%', echo=FALSE}
+wms_url <- "https://tucbs-public-api.csb.gov.tr/trk_afad_tdth_wms"
+layer_name <- "69"
+
+m <- leaflet() %>%
+  setView(lng = 35.0, lat = 39.0, zoom = 6) %>%
+  #addTiles() %>%
+  addWMSTiles(
+    wms_url,
+    layers = layer_name,
+    options = WMSTileOptions(format = "image/png", transparent = TRUE)
+  ) %>% 
+    
+    addWMSTiles(
+    wms_url,
+    layers = "67",
+    options = WMSTileOptions(format = "image/png", transparent = TRUE)
+  )
+m
+
+```
