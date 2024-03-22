@@ -32,7 +32,14 @@ m <- leaflet() %>%
     wms_url,
     layers = "67",
     options = WMSTileOptions(format = "image/png", transparent = TRUE)
-  )
+    
+  ) %>% 
+  
+    addWMSTiles(
+    wms_url,
+    layers = "68",
+    options = WMSTileOptions(format = "image/png", transparent = TRUE)
+    )
 m
 
 ```
