@@ -2,12 +2,9 @@
 title: "Neigbourhood Boundaries"
 ---
 
-
 ```{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
-
 
 Navigate the map to use neighbourhood and village boundaries. As you move the map closer, the neighbourhood and village boundaries will start to appear.
 
